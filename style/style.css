@@ -417,6 +417,7 @@ footer span {
     }
     
     .fa-bars {
+        color: #fff;
         display: block !important;
     }
     /* banner title media  start */
@@ -503,4 +504,17 @@ footer span {
         margin-top: 1rem;
     }
     /* about content media end */
+
+    @media (max-width: 500px)  {
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(1, 0.5fr);
+            gap: 2rem;
+            margin: 2rem 1rem;
+            justify-content: center;
+        }
+        .blog-card-text {
+            width: 100%;
+        }
+    }
 }
