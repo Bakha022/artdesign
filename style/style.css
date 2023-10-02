@@ -58,6 +58,10 @@ nav .list_items {
     list-style-type: none;
     padding: 0.8rem 0.6rem 0;
 }
+
+.fa-bars {
+    display: none;
+}
 .list_items .list_items_link {
     text-transform: uppercase;
     font-family: var(--Roboto);
@@ -407,6 +411,14 @@ footer span {
 
 @media (max-width: 798px) {
 
+    /* nav items media start */
+    nav ul {
+        display: none !important;
+    }
+    
+    .fa-bars {
+        display: block;
+    }
     /* banner title media  start */
     .banner-title {
         margin-top: 10rem;
