@@ -1,0 +1,494 @@
+
+/* Global css start */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+
+
+:root {
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark: #3c393d;
+    --exdark: #2b2b2b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Quicksand);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Global css end */
+
+
+/* Header styling  start */
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/img/banner-bg.jpg)  center/cover no-repeat fixed;
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+}
+nav a {
+    text-decoration: none;
+}
+
+nav .list_items {
+    display: flex;
+    list-style-type: none;
+    padding: 0.8rem 0.6rem 0;
+}
+.list_items .list_items_link {
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #ffff;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+.logo_text .logo-img {
+    font-size: 2rem;
+    color: #fff;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 1px;
+}
+
+
+.list_items .list_items_link:hover {
+    opacity: 0.7;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ffff;
+    margin-top: 9%;
+}
+
+.banner-title {
+    font-size: 5rem;
+    font-family: var(--Playfair);
+    line-height: 1.2;
+}
+
+.banner-title span {
+    font-family: var(--Playfair);
+    color: var(--exdark);
+}
+
+.banner .banner_tit2 {
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    font-family: var(--Roboto);
+    font-weight: 300;
+    word-spacing: 2px;
+}
+
+.banner form {
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 1.4rem;
+    width: 80%;
+}
+
+
+.banner form input {
+    font-family: var(--Roboto);
+    font-size: 1.2rem;
+    outline: none;
+    padding: 0.6rem 0;
+    border: none;
+}
+
+.banner form input::placeholder {
+    text-transform: capitalize;
+}
+
+.searchBtn{
+    width: 40px;
+    font-size: 1.2rem;
+    color: var(--dark);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Design card styling  start*/
+#design {
+    padding: 4.5rem  0;
+}
+
+.container .title {
+    text-align: center;
+    padding: 1rem;
+}
+
+.container .title h2 {
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+
+.container .title p {
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+.design-content {
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.design-content .design-item {
+    cursor: pointer;
+    margin: 0;
+}
+.design-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.design-img::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.design-img img {
+    transition: all 0.5s ease;
+}
+.design-img:hover img {
+    transform: scale(1.2);
+}   
+
+.design-img span:first-of-type {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--dark);
+    color: #fff;
+    content: "";
+    padding: 0.25rem 1rem;
+    z-index: 2;
+}
+
+.design-img span:last-of-type {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+    font-family: var(--Quicksand);
+    font-weight: 700;
+    color: #fff;
+}
+
+.design-title {
+    width:  90%;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.design-title a {
+    text-decoration: none;
+    font-family: var(--Roboto);
+    color: var(--dark);
+}
+
+/* Design card styling  end*/
+
+
+/* Blog card styling start */
+.blog {
+    background-color: #f9f9f9;
+    padding: 4.5rem 0 ;
+
+} 
+.blog-title h2 {
+    font-family: var(--Playfair);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.blog-title p {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(164, 162, 162);
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 1rem;
+}
+
+.blog-img {
+    position: relative;
+}
+ 
+.blog-img span {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--dark);
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0.1rem 0.3rem;
+}
+
+
+.blog-card-text {
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+
+.blog-card-text .day_title  {
+    color: rgb(167, 165, 165);
+    font-weight: 300;
+    font-family: var(--Quicksand);
+}
+
+.blog-card-text h3 {
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+
+.card-title-description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+
+
+.blog-card-text a {
+    text-decoration: none;
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: var(--dark);
+    padding: 0.55rem 1.2rem;
+}
+.blog-card-text a:hover {
+    background-color: var(--exdark);
+    transition: all 0.5s ease ;
+}
+/* Blog card styling end */
+
+
+
+
+/* About styling start */
+
+.about {
+    padding: 4.5rem 1.2rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+.about-img img {
+    width: 100%;
+}
+.about-title{
+    text-align: center;
+}
+
+
+.about-description p {
+    margin-top: 1.8rem;
+    font-family: var(--Quicksand);
+    font-weight: 500;
+    opacity: 0.8;
+}
+/* About styling end */
+
+
+
+/* Footer styling start */
+footer {
+    background-color: var(--dark);
+    text-align: center;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    gap: 1rem;
+}
+
+.social_links a {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.social_links a:hover {
+    background-color: #fff;
+    color:  var(--dark);
+}
+
+
+footer span {
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+/* Footer styling end */
+
+
+
+/* media query */
+
+@media (max-width: 798px) {
+
+    /* banner title media  start */
+    .banner-title {
+        margin-top: 10rem;
+        font-size: 3rem;
+    }
+
+    .banner form {
+        width: 250px;
+    }
+
+    .banner_tit2 {
+        font-size: 1.2rem;
+    }
+    .banner form input {
+        width: 150px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    /* banner title media  end */
+
+
+    /* design title media start */
+    .design .title h2 {
+        font-size: 2rem;
+    }
+    .design .title {
+        font-size: 0.9rem;
+    }
+    /* design title media end */
+
+
+    /* design item card media start */
+    
+    .design-content {
+        margin: 2rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 0.8fr);
+        gap: 2rem;
+    }
+
+
+    .design-title a {
+        font-size: 1rem;
+    }
+    /* design item card media end */
+
+    /* blog cards media start */
+
+    .blog-card-text  h3 {
+        font-size: 16px;
+    }
+
+    .day_title {
+        font-size: 14px;
+    }
+
+    .card-title-description {
+        font-size: 12px;
+    }
+    #read_btn {
+        font-size: 12px;
+    }
+
+    .card .blog-img span {
+        font-size: 12px;
+        width: 24px;
+        margin: 0 auto;
+    }
+    /* blog cards media end */
+
+    /* about content media start */
+    .about-content {
+        display: block;
+    }
+
+    .about-content .about-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-title {
+        margin-top: 1rem;
+    }
+    /* about content media end */
+}
