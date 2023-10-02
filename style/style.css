@@ -417,7 +417,7 @@ footer span {
     }
     
     .fa-bars {
-        display: block;
+        display: block !important;
     }
     /* banner title media  start */
     .banner-title {
